@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class User {
 
     @Id
@@ -22,4 +23,10 @@ public class User {
 
     @Column(name = "NAME", length = 50)
     private String name;
+
+    @Column(name = "AGE")
+    private int age;
+
+    @Column(name = "LOCATION")
+    private String location;
 }
